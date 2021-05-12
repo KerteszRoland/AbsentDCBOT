@@ -43,9 +43,13 @@ async def on_ready():
     
 @client.command()
 async def absent(ctx, group_arg = 0):
+    try:
+        voice_channel = ctx.author.voice.channel
+    except:
+        await ctx.channel.send("You aren't in a Voice channel\nPlease connect to a Voice Channel!")
+        return
     group = int(group_arg)
     mates = await GetClassMates("classmates.txt")
-    voice_channel = ctx.author.voice.channel
     in_voice_names = []
     for member in voice_channel.members:
         in_voice_names.append(member.display_name)
