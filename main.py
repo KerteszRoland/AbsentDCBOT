@@ -42,13 +42,18 @@ async def on_ready():
 
     
 @client.command()
-async def absent(ctx, group_arg = 0):
+async def absent(ctx, group_arg = "0"):
     try:
         voice_channel = ctx.author.voice.channel
     except:
         await ctx.channel.send("You aren't in a Voice channel\nPlease connect to a Voice Channel!")
         return
-    group = int(group_arg)
+    if group_arg.isdigit():
+        group = int(group_arg)
+    else:
+        await ctx.channel.send("Incorrect group_id!\nPlease give a group_id number!")
+        return
+        
     mates = await GetClassMates("classmates.txt")
     in_voice_names = []
     for member in voice_channel.members:
