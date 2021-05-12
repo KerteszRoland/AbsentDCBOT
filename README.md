@@ -2,6 +2,7 @@
 This Discord bot tells you if somebody is absent in your voice chat. \
 \
 Setup: 
+- Install requirements: pip install -r requirements.txt
 - Put your DC API key into Bearer_token.txt\
 - Fill the classmates.txt with a list of names and an associated group_ids \
 \
