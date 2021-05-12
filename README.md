@@ -1,7 +1,7 @@
 # AbsentDCBOT
 This Discord bot tells you if somebody is absent in your voice chat. \
 \
-Setup: \
+Setup: 
 - Put your DC API key into Bearer_token.txt\
 - Fill the classmates.txt with a list of names and an associated group_ids \
 \
