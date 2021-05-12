@@ -1,0 +1,6 @@
+István;2
+Attila;2
+Péter;1
+Ádám;1
+Roland;2
+Levente;2
